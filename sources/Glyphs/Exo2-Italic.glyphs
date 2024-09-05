@@ -23,6 +23,22 @@ value = (
 {
 name = "Use Typo Metrics";
 value = 1;
+},
+{
+name = "Axis Mappings";
+value = {
+wght = {
+100 = 24;
+200 = 40;
+300 = 64;
+400 = 86;
+500 = 98;
+600 = 123;
+700 = 150;
+800 = 185;
+900 = 214;
+};
+};
 }
 );
 date = "2013-04-26 10:48:50 +0000";
@@ -372,12 +388,31 @@ automatic = 1;
 code = "pos @Uppercase <5 0 10 0>;
 ";
 tag = cpsp;
+},
+{
+automatic = 1;
+code = "sub Oslash by Oslash.rvrn;
+sub Oslashacute by Oslashacute.rvrn;
+sub eth by eth.rvrn;
+sub oslash by oslash.rvrn;
+sub oslashacute by oslashacute.rvrn;
+sub cent by cent.rvrn;
+sub dollar by dollar.rvrn;
+sub euro by euro.rvrn;
+sub naira by naira.rvrn;
+sub peseta by peseta.rvrn;
+sub peso by peso.rvrn;
+sub won by won.rvrn;
+sub yen by yen.rvrn;
+sub notequal by notequal.rvrn;
+";
+tag = rvrn;
 }
 );
 fontMaster = (
 {
 axesValues = (
-100
+24
 );
 customParameters = (
 {
@@ -1509,7 +1544,7 @@ layerinfo.color = "1,0.75,0,0.7";
 },
 {
 axesValues = (
-400
+86
 );
 customParameters = (
 {
@@ -2640,7 +2675,7 @@ layerinfo.color = "1,0.75,0,0.7";
 },
 {
 axesValues = (
-900
+214
 );
 customParameters = (
 {
@@ -112843,7 +112878,7 @@ width = 460;
 instances = (
 {
 axesValues = (
-100
+24
 );
 instanceInterpolations = {
 "E21536AE-9819-4FE7-8A20-8865FE3C0515" = 1;
@@ -112854,11 +112889,11 @@ weightClass = 100;
 },
 {
 axesValues = (
-200
+40
 );
 instanceInterpolations = {
-"54A40BFF-1CE0-48F0-82EB-25AA62455493" = 0.33333;
-"E21536AE-9819-4FE7-8A20-8865FE3C0515" = 0.66667;
+"54A40BFF-1CE0-48F0-82EB-25AA62455493" = 0.25806;
+"E21536AE-9819-4FE7-8A20-8865FE3C0515" = 0.74194;
 };
 isItalic = 1;
 name = "ExtraLight Italic";
@@ -112866,11 +112901,11 @@ weightClass = 200;
 },
 {
 axesValues = (
-300
+64
 );
 instanceInterpolations = {
-"54A40BFF-1CE0-48F0-82EB-25AA62455493" = 0.66667;
-"E21536AE-9819-4FE7-8A20-8865FE3C0515" = 0.33333;
+"54A40BFF-1CE0-48F0-82EB-25AA62455493" = 0.64516;
+"E21536AE-9819-4FE7-8A20-8865FE3C0515" = 0.35484;
 };
 isItalic = 1;
 name = "Light Italic";
@@ -112878,7 +112913,7 @@ weightClass = 300;
 },
 {
 axesValues = (
-400
+86
 );
 instanceInterpolations = {
 "54A40BFF-1CE0-48F0-82EB-25AA62455493" = 1;
@@ -112888,11 +112923,11 @@ name = Italic;
 },
 {
 axesValues = (
-500
+98
 );
 instanceInterpolations = {
-"54A40BFF-1CE0-48F0-82EB-25AA62455493" = 0.8;
-"924B7471-43FB-4CAD-AF7E-45215B64D997" = 0.2;
+"54A40BFF-1CE0-48F0-82EB-25AA62455493" = 0.90625;
+"924B7471-43FB-4CAD-AF7E-45215B64D997" = 0.09375;
 };
 isItalic = 1;
 name = "Medium Italic";
@@ -112900,11 +112935,11 @@ weightClass = 500;
 },
 {
 axesValues = (
-600
+123
 );
 instanceInterpolations = {
-"54A40BFF-1CE0-48F0-82EB-25AA62455493" = 0.6;
-"924B7471-43FB-4CAD-AF7E-45215B64D997" = 0.4;
+"54A40BFF-1CE0-48F0-82EB-25AA62455493" = 0.71094;
+"924B7471-43FB-4CAD-AF7E-45215B64D997" = 0.28906;
 };
 isItalic = 1;
 name = "SemiBold Italic";
@@ -112912,11 +112947,11 @@ weightClass = 600;
 },
 {
 axesValues = (
-700
+150
 );
 instanceInterpolations = {
-"54A40BFF-1CE0-48F0-82EB-25AA62455493" = 0.4;
-"924B7471-43FB-4CAD-AF7E-45215B64D997" = 0.6;
+"54A40BFF-1CE0-48F0-82EB-25AA62455493" = 0.5;
+"924B7471-43FB-4CAD-AF7E-45215B64D997" = 0.5;
 };
 isBold = 1;
 isItalic = 1;
@@ -112925,11 +112960,11 @@ weightClass = 700;
 },
 {
 axesValues = (
-800
+185
 );
 instanceInterpolations = {
-"54A40BFF-1CE0-48F0-82EB-25AA62455493" = 0.2;
-"924B7471-43FB-4CAD-AF7E-45215B64D997" = 0.8;
+"54A40BFF-1CE0-48F0-82EB-25AA62455493" = 0.22656;
+"924B7471-43FB-4CAD-AF7E-45215B64D997" = 0.77344;
 };
 isItalic = 1;
 name = "ExtraBold Italic";
@@ -112937,7 +112972,7 @@ weightClass = 800;
 },
 {
 axesValues = (
-900
+214
 );
 instanceInterpolations = {
 "924B7471-43FB-4CAD-AF7E-45215B64D997" = 1;
