@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni04F6" format="2">
+  <advance width="503"/>
+  <unicode hex="04F6"/>
+  <outline>
+    <contour>
+      <point x="202" y="22" type="line"/>
+      <point x="100" y="22" type="line"/>
+      <point x="100" y="0" type="line"/>
+      <point x="202" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="202" y="7" type="line"/>
+      <point x="178" y="7" type="line"/>
+      <point x="184" y="-151" type="line"/>
+      <point x="202" y="-151" type="line"/>
+    </contour>
+    <component base="uni0413"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>F</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2024-09-05 12:38:30 +0000</string>
+    </dict>
+  </lib>
+</glyph>

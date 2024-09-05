@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni049A" format="2">
+  <advance width="630.83529"/>
+  <unicode hex="049A"/>
+  <outline>
+    <contour>
+      <point x="625" y="72" type="line"/>
+      <point x="480" y="72" type="line"/>
+      <point x="480" y="0" type="line"/>
+      <point x="625" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="625" y="7" type="line"/>
+      <point x="560" y="7" type="line"/>
+      <point x="569" y="-151" type="line"/>
+      <point x="625" y="-151" type="line"/>
+    </contour>
+    <component base="uni041A"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>H</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2024-09-05 12:38:30 +0000</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
+      <array>
+        <integer>-1</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

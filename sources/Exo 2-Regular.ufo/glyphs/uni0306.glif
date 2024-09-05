@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni0306" format="2">
+  <advance width="0"/>
+  <unicode hex="0306"/>
+  <anchor x="-198" y="547" name="_top"/>
+  <outline>
+    <contour>
+      <point x="-50" y="690" type="curve"/>
+      <point x="-93" y="696" type="line"/>
+      <point x="-93" y="649"/>
+      <point x="-132" y="621"/>
+      <point x="-198" y="621" type="curve" smooth="yes"/>
+      <point x="-268" y="621"/>
+      <point x="-306" y="649"/>
+      <point x="-306" y="696" type="curve"/>
+      <point x="-349" y="690" type="line"/>
+      <point x="-354" y="612"/>
+      <point x="-296" y="558"/>
+      <point x="-198" y="558" type="curve" smooth="yes"/>
+      <point x="-102" y="558"/>
+      <point x="-44" y="612"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2024-09-05 12:38:30 +0000</string>
+    </dict>
+  </lib>
+</glyph>

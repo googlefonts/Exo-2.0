@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni04AD" format="2">
+  <advance width="553"/>
+  <unicode hex="04AD"/>
+  <outline>
+    <contour>
+      <point x="382" y="500" type="line"/>
+      <point x="171" y="500" type="line"/>
+      <point x="171" y="0" type="line"/>
+      <point x="382" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="548" y="500" type="line"/>
+      <point x="5" y="500" type="line"/>
+      <point x="5" y="359" type="line"/>
+      <point x="548" y="359" type="line"/>
+    </contour>
+    <contour>
+      <point x="462" y="136" type="line"/>
+      <point x="257" y="136" type="line"/>
+      <point x="257" y="0" type="line"/>
+      <point x="462" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="462" y="5" type="line"/>
+      <point x="308" y="5" type="line"/>
+      <point x="323" y="-136" type="line"/>
+      <point x="462" y="-136" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2024-09-05 12:38:30 +0000</string>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni2215" format="2">
+  <advance width="517.34118"/>
+  <unicode hex="2215"/>
+  <outline>
+    <contour>
+      <point x="495" y="695" type="line"/>
+      <point x="425" y="695" type="line"/>
+      <point x="22" y="-61" type="line"/>
+      <point x="93" y="-61" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2024-09-05 12:38:30 +0000</string>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Oslashacute.rvrn" format="2">
+  <advance width="701"/>
+  <outline>
+    <contour>
+      <point x="233" y="46" type="line"/>
+      <point x="104" y="95" type="line"/>
+      <point x="36" y="-18" type="line"/>
+      <point x="165" y="-68" type="line"/>
+    </contour>
+    <contour>
+      <point x="493" y="653" type="line"/>
+      <point x="618" y="595" type="line"/>
+      <point x="687" y="711" type="line"/>
+      <point x="557" y="760" type="line"/>
+    </contour>
+    <component base="O"/>
+    <component base="acutecomb" xOffset="632" yOffset="209"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2024-09-05 12:38:03 +0000</string>
+      <key>public.markColor</key>
+      <string>1,0.88,0.18,1</string>
+    </dict>
+  </lib>
+</glyph>
