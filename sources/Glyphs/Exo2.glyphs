@@ -1,11 +1,6 @@
 {
 .appVersion = "3316";
 .formatVersion = 3;
-DisplayStrings = (
-"̛",
-"̌",
-"/caroncomb.alt LĽdďlľtť"
-);
 axes = (
 {
 name = Weight;
@@ -60920,7 +60915,7 @@ unicode = 1072;
 glyphname = "be-cy";
 kernLeft = uni0431;
 kernRight = uni0431;
-lastChange = "2024-09-05 13:04:50 +0000";
+lastChange = "2024-09-05 14:04:00 +0000";
 layers = (
 {
 layerId = "DB82AE46-9E91-4728-8B1E-D34291E5A7BF";
@@ -87516,34 +87511,37 @@ width = 146;
 {
 color = 9;
 glyphname = periodcentered.loclCAT.case;
-lastChange = "2024-09-05 12:45:17 +0000";
+lastChange = "2024-09-05 14:09:35 +0000";
 layers = (
 {
 layerId = "E21536AE-9819-4FE7-8A20-8865FE3C0515";
 shapes = (
 {
+alignment = -1;
 ref = periodcentered.loclCAT;
 }
 );
-width = 44;
+width = 79;
 },
 {
 layerId = "DB82AE46-9E91-4728-8B1E-D34291E5A7BF";
 shapes = (
 {
+alignment = -1;
 ref = periodcentered.loclCAT;
 }
 );
-width = 42;
+width = 132;
 },
 {
 layerId = "924B7471-43FB-4CAD-AF7E-45215B64D997";
 shapes = (
 {
+alignment = -1;
 ref = periodcentered.loclCAT;
 }
 );
-width = 146;
+width = 166;
 }
 );
 },
@@ -110664,7 +110662,7 @@ kerningLTR = {
 "@MMK_R_v" = -89;
 "@MMK_R_w" = -64;
 "@MMK_R_y" = -89;
-periodcentered.loclCAT.case = -40;
+periodcentered.loclCAT.case = -125;
 };
 "@MMK_L_M" = {
 "@MMK_R_emdash" = -17;
@@ -113261,7 +113259,7 @@ two.osf = -11;
 "@MMK_R_v" = -71;
 "@MMK_R_w" = -49;
 "@MMK_R_y" = -69;
-periodcentered.loclCAT.case = -40;
+periodcentered.loclCAT.case = -170;
 };
 "@MMK_L_M" = {
 "@MMK_R_Y" = -4;
@@ -116289,7 +116287,7 @@ two.osf = -3;
 "@MMK_R_v" = -46;
 "@MMK_R_w" = -20;
 "@MMK_R_y" = -46;
-periodcentered.loclCAT.case = -80;
+periodcentered.loclCAT.case = -185;
 };
 "@MMK_L_M" = {
 "@MMK_R_W" = -5;
