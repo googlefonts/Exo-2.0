@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="five.tf" format="2">
+  <advance width="620"/>
+  <outline>
+    <component base="five" xOffset="27" identifier="C8455CC7"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2024-09-05 12:38:30 +0000</string>
+      <key>public.objectLibs</key>
+      <dict>
+        <key>C8455CC7</key>
+        <dict>
+          <key>com.schriftgestaltung.alignment</key>
+          <integer>-1</integer>
+        </dict>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

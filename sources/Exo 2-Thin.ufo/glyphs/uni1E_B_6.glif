@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni1EB6" format="2">
+  <advance width="603"/>
+  <unicode hex="1EB6"/>
+  <outline>
+    <component base="uni0306" xOffset="515" yOffset="186" identifier="25F7CABD"/>
+    <component base="A" identifier="0B2E9B54"/>
+    <component base="dotbelow" xOffset="199" yOffset="8" identifier="F6009E9B"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2024-09-05 12:38:30 +0000</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
+      <array>
+        <integer>0</integer>
+        <integer>0</integer>
+        <integer>-1</integer>
+      </array>
+      <key>public.objectLibs</key>
+      <dict>
+        <key>0B2E9B54</key>
+        <dict>
+          <key>com.schriftgestaltung.alignment</key>
+          <integer>-1</integer>
+        </dict>
+        <key>25F7CABD</key>
+        <dict>
+          <key>com.schriftgestaltung.alignment</key>
+          <integer>-1</integer>
+        </dict>
+        <key>F6009E9B</key>
+        <dict>
+          <key>com.schriftgestaltung.alignment</key>
+          <integer>-1</integer>
+        </dict>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

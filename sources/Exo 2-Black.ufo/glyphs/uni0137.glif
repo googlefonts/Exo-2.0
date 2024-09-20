@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni0137" format="2">
+  <advance width="609"/>
+  <unicode hex="0137"/>
+  <outline>
+    <component base="k"/>
+    <component base="comma" xScale="0.909" yScale="0.751" xOffset="191" yOffset="-177"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2024-09-05 12:38:30 +0000</string>
+    </dict>
+  </lib>
+</glyph>

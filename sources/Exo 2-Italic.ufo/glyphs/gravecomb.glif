@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="gravecomb" format="2">
+  <advance width="0"/>
+  <unicode hex="0300"/>
+  <anchor x="242" y="544" name="_top"/>
+  <outline>
+    <contour>
+      <point x="264" y="538" type="line"/>
+      <point x="295" y="576" type="line"/>
+      <point x="125" y="723" type="line"/>
+      <point x="79" y="663" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2024-09-05 13:09:18 +0000</string>
+    </dict>
+  </lib>
+</glyph>

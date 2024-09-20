@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Ohorn" format="2">
+  <advance width="746"/>
+  <unicode hex="01A0"/>
+  <anchor x="303" y="-20" name="bottom"/>
+  <anchor x="412" y="735" name="top"/>
+  <outline>
+    <component base="O" identifier="369DD1FC"/>
+    <component base="uni031B" xOffset="863" yOffset="160" identifier="76AA564A"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2024-09-05 12:38:03 +0000</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
+      <array>
+        <integer>-1</integer>
+        <integer>-1</integer>
+      </array>
+      <key>public.objectLibs</key>
+      <dict>
+        <key>369DD1FC</key>
+        <dict>
+          <key>com.schriftgestaltung.alignment</key>
+          <integer>-1</integer>
+        </dict>
+        <key>76AA564A</key>
+        <dict>
+          <key>com.schriftgestaltung.alignment</key>
+          <integer>-1</integer>
+        </dict>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

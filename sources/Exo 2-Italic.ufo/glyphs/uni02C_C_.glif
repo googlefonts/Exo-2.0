@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni02CC" format="2">
+  <advance width="211.4"/>
+  <unicode hex="02CC"/>
+  <anchor x="71" y="0" name="_bottom"/>
+  <outline>
+    <contour>
+      <point x="77" y="-176" type="line"/>
+      <point x="99" y="-52" type="line"/>
+      <point x="34" y="-52" type="line"/>
+      <point x="12" y="-176" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2024-09-05 12:38:03 +0000</string>
+    </dict>
+  </lib>
+</glyph>

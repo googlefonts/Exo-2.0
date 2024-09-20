@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni1EDF" format="2">
+  <advance width="654"/>
+  <unicode hex="1EDF"/>
+  <outline>
+    <component base="ohorn"/>
+    <component base="hookabovecomb" xOffset="477" yOffset="14"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2024-09-05 12:38:30 +0000</string>
+    </dict>
+  </lib>
+</glyph>

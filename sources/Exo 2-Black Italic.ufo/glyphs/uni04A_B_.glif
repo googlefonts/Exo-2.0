@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni04AB" format="2">
+  <advance width="536"/>
+  <unicode hex="04AB"/>
+  <outline>
+    <contour>
+      <point x="331" y="5" type="line"/>
+      <point x="165" y="5" type="line"/>
+      <point x="154" y="-162" type="line"/>
+      <point x="295" y="-162" type="line"/>
+    </contour>
+    <component base="c"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>c</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>c</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2024-09-05 12:38:03 +0000</string>
+    </dict>
+  </lib>
+</glyph>

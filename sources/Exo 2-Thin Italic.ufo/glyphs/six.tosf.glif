@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="six.tosf" format="2">
+  <advance width="620"/>
+  <outline>
+    <component base="six.osf" xOffset="35" identifier="FB9F7674"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2024-09-05 12:38:03 +0000</string>
+      <key>public.objectLibs</key>
+      <dict>
+        <key>FB9F7674</key>
+        <dict>
+          <key>com.schriftgestaltung.alignment</key>
+          <integer>-1</integer>
+        </dict>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

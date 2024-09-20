@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni04B3" format="2">
+  <advance width="525.8"/>
+  <unicode hex="04B3"/>
+  <outline>
+    <contour>
+      <point x="510" y="68" type="line"/>
+      <point x="391" y="68" type="line"/>
+      <point x="382" y="0" type="line"/>
+      <point x="436" y="0" type="line"/>
+      <point x="424" y="-144" type="line"/>
+      <point x="481" y="-144" type="line"/>
+    </contour>
+    <component base="x"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>x</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2024-09-05 12:38:03 +0000</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
+      <array>
+        <integer>-1</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

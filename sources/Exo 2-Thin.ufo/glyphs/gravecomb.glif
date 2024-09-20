@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="gravecomb" format="2">
+  <advance width="0"/>
+  <unicode hex="0300"/>
+  <anchor x="178" y="554" name="_top"/>
+  <outline>
+    <contour>
+      <point x="68" y="708" type="line"/>
+      <point x="50" y="691" type="line"/>
+      <point x="203" y="550" type="line"/>
+      <point x="217" y="563" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2024-09-05 12:45:29 +0000</string>
+      <key>public.markColor</key>
+      <string>0.98,0.36,0.67,1</string>
+    </dict>
+  </lib>
+</glyph>

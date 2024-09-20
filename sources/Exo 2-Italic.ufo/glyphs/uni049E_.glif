@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni049E" format="2">
+  <advance width="643.92941"/>
+  <unicode hex="049E"/>
+  <outline>
+    <contour>
+      <point x="51" y="558" type="line"/>
+      <point x="401" y="558" type="line"/>
+      <point x="410" y="622" type="line"/>
+      <point x="60" y="622" type="line"/>
+    </contour>
+    <component base="uni041A" xOffset="53"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2024-09-05 12:38:03 +0000</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
+      <array>
+        <integer>-1</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

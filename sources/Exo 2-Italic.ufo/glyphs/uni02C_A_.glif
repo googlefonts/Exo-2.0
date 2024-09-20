@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni02CA" format="2">
+  <advance width="314.2"/>
+  <unicode hex="02CA"/>
+  <anchor x="163" y="544" name="_top"/>
+  <outline>
+    <contour>
+      <point x="293" y="724" type="line"/>
+      <point x="101" y="577" type="line"/>
+      <point x="127" y="538" type="line"/>
+      <point x="334" y="658" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2024-09-05 12:38:03 +0000</string>
+    </dict>
+  </lib>
+</glyph>

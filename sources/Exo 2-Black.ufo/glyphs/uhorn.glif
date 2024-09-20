@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uhorn" format="2">
+  <advance width="705"/>
+  <unicode hex="01B0"/>
+  <anchor x="307" y="-12" name="bottom"/>
+  <anchor x="306" y="557" name="top"/>
+  <outline>
+    <component base="u" identifier="4F18A889"/>
+    <component base="uni031B" xOffset="801" yOffset="2" identifier="BCD1680D"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2024-09-05 12:38:30 +0000</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
+      <array>
+        <integer>-1</integer>
+        <integer>-1</integer>
+      </array>
+      <key>public.objectLibs</key>
+      <dict>
+        <key>4F18A889</key>
+        <dict>
+          <key>com.schriftgestaltung.alignment</key>
+          <integer>-1</integer>
+        </dict>
+        <key>BCD1680D</key>
+        <dict>
+          <key>com.schriftgestaltung.alignment</key>
+          <integer>-1</integer>
+        </dict>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

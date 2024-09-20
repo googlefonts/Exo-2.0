@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni049E" format="2">
+  <advance width="606"/>
+  <unicode hex="049E"/>
+  <outline>
+    <contour>
+      <point x="23" y="530" type="line"/>
+      <point x="284" y="530" type="line"/>
+      <point x="284" y="553" type="line"/>
+      <point x="23" y="553" type="line"/>
+    </contour>
+    <component base="uni041A" xOffset="38"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2024-09-05 13:33:07 +0000</string>
+    </dict>
+  </lib>
+</glyph>

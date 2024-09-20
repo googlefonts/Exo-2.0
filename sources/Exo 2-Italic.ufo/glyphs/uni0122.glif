@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni0122" format="2">
+  <advance width="624"/>
+  <unicode hex="0122"/>
+  <outline>
+    <component base="G"/>
+    <component base="comma" xScale="0.909" yScale="0.8579" xOffset="205" yOffset="-160"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>G</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>G</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2024-09-05 13:46:00 +0000</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
+      <array>
+        <integer>-1</integer>
+        <integer>-1</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>
