@@ -1,0 +1,901 @@
+# buildVariable: Build a variable font from a source file
+rule buildVariable
+  command = /Users/marichalemma/Google/env/bin/python3.12 -m $
+      gftools.builder.jobrunner fontmake --output-path $out -o variable $
+      $fontmake_type $in $args $stamp
+  description = buildVariable
+
+# fix: Run gftools-fix
+rule fix
+  command = /Users/marichalemma/Google/env/bin/python3.12 -m $
+      gftools.builder.jobrunner gftools-fix-font -o $out $args $in $stamp
+  description = fix
+
+# compress: Compress to webfont
+rule compress
+  command = /Users/marichalemma/Google/env/bin/python3.12 -m $
+      gftools.builder.jobrunner fonttools ttLib.woff2 compress -o $out $in $
+      $stamp
+  description = compress
+
+# buildStat: Build a STAT table from one or more source files
+rule buildSTAT-operation
+  command = gftools-gen-stat --out $tempdir $args -- $in && mv $finalfile $
+      $out $stamp
+rule buildSTAT-postprocess
+  command = gftools-gen-stat --inplace $args -- $in $stamp
+
+# instantiateUfo: Create instance UFOs from a Glyphs or designspace file
+rule instantiateUfo
+  command = /Users/marichalemma/Google/env/bin/python3.12 -m $
+      gftools.builder.jobrunner fontmake -i "$instance_name" -o ufo $
+      $fontmake_type $in $args $stamp
+  description = instantiateUfo
+
+# buildTTF: Build a TTF from a source file
+rule buildTTF
+  command = /Users/marichalemma/Google/env/bin/python3.12 -m $
+      gftools.builder.jobrunner fontmake --output-path $out -o ttf $
+      $fontmake_type $in $args $stamp
+  description = buildTTF
+
+# autohint: Run gftools-autohint
+rule autohint
+  command = /Users/marichalemma/Google/env/bin/python3.12 -m $
+      gftools.builder.jobrunner gftools-autohint $args -o $out $in $stamp
+  description = autohint
+
+# buildOTF: Build a OTF from a source file
+rule buildOTF
+  command = /Users/marichalemma/Google/env/bin/python3.12 -m $
+      gftools.builder.jobrunner fontmake --output-path $out -o otf $
+      $fontmake_type $in $args $stamp
+  description = buildOTF
+
+# copy: Copy a file
+rule copy
+  command = /Users/marichalemma/Google/env/bin/python3.12 -m $
+      gftools.builder.jobrunner cp $in $out $stamp
+  description = copy
+
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmps9ewfi5v
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmps9ewfi5v: $
+    buildVariable Glyphs/Exo2.glyphs
+  operation = buildVariable
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+# Generating Glyphs/instance_ufos/Exo2-Thin.ufo.json
+build Glyphs/instance_ufos/Exo2-Thin.ufo.json: instantiateUfo $
+    Glyphs/Exo2.glyphs
+  operation = instantiateUfo
+  instance_name = Exo 2 Thin
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir Glyphs/instance_ufos
+# Generating Glyphs/instance_ufos/Exo2-ExtraLight.ufo.json
+build Glyphs/instance_ufos/Exo2-ExtraLight.ufo.json: instantiateUfo $
+    Glyphs/Exo2.glyphs
+  operation = instantiateUfo
+  instance_name = Exo 2 ExtraLight
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir Glyphs/instance_ufos
+# Generating Glyphs/instance_ufos/Exo2-Light.ufo.json
+build Glyphs/instance_ufos/Exo2-Light.ufo.json: instantiateUfo $
+    Glyphs/Exo2.glyphs
+  operation = instantiateUfo
+  instance_name = Exo 2 Light
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir Glyphs/instance_ufos
+# Generating Glyphs/instance_ufos/Exo2-Regular.ufo.json
+build Glyphs/instance_ufos/Exo2-Regular.ufo.json: instantiateUfo $
+    Glyphs/Exo2.glyphs
+  operation = instantiateUfo
+  instance_name = Exo 2 Regular
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir Glyphs/instance_ufos
+# Generating Glyphs/instance_ufos/Exo2-Medium.ufo.json
+build Glyphs/instance_ufos/Exo2-Medium.ufo.json: instantiateUfo $
+    Glyphs/Exo2.glyphs
+  operation = instantiateUfo
+  instance_name = Exo 2 Medium
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir Glyphs/instance_ufos
+# Generating Glyphs/instance_ufos/Exo2-SemiBold.ufo.json
+build Glyphs/instance_ufos/Exo2-SemiBold.ufo.json: instantiateUfo $
+    Glyphs/Exo2.glyphs
+  operation = instantiateUfo
+  instance_name = Exo 2 SemiBold
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir Glyphs/instance_ufos
+# Generating Glyphs/instance_ufos/Exo2-Bold.ufo.json
+build Glyphs/instance_ufos/Exo2-Bold.ufo.json: instantiateUfo $
+    Glyphs/Exo2.glyphs
+  operation = instantiateUfo
+  instance_name = Exo 2 Bold
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir Glyphs/instance_ufos
+# Generating Glyphs/instance_ufos/Exo2-ExtraBold.ufo.json
+build Glyphs/instance_ufos/Exo2-ExtraBold.ufo.json: instantiateUfo $
+    Glyphs/Exo2.glyphs
+  operation = instantiateUfo
+  instance_name = Exo 2 ExtraBold
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir Glyphs/instance_ufos
+# Generating Glyphs/instance_ufos/Exo2-Black.ufo.json
+build Glyphs/instance_ufos/Exo2-Black.ufo.json: instantiateUfo $
+    Glyphs/Exo2.glyphs
+  operation = instantiateUfo
+  instance_name = Exo 2 Black
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir Glyphs/instance_ufos
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpmyu2kpm4
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpmyu2kpm4: $
+    buildVariable Glyphs/Exo2-Italic.glyphs
+  operation = buildVariable
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+# Generating Glyphs/instance_ufos/Exo2-ThinItalic.ufo.json
+build Glyphs/instance_ufos/Exo2-ThinItalic.ufo.json: instantiateUfo $
+    Glyphs/Exo2-Italic.glyphs
+  operation = instantiateUfo
+  instance_name = Exo 2 Thin Italic
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir Glyphs/instance_ufos
+# Generating Glyphs/instance_ufos/Exo2-ExtraLightItalic.ufo.json
+build Glyphs/instance_ufos/Exo2-ExtraLightItalic.ufo.json: instantiateUfo $
+    Glyphs/Exo2-Italic.glyphs
+  operation = instantiateUfo
+  instance_name = Exo 2 ExtraLight Italic
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir Glyphs/instance_ufos
+# Generating Glyphs/instance_ufos/Exo2-LightItalic.ufo.json
+build Glyphs/instance_ufos/Exo2-LightItalic.ufo.json: instantiateUfo $
+    Glyphs/Exo2-Italic.glyphs
+  operation = instantiateUfo
+  instance_name = Exo 2 Light Italic
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir Glyphs/instance_ufos
+# Generating Glyphs/instance_ufos/Exo2-Italic.ufo.json
+build Glyphs/instance_ufos/Exo2-Italic.ufo.json: instantiateUfo $
+    Glyphs/Exo2-Italic.glyphs
+  operation = instantiateUfo
+  instance_name = Exo 2 Italic
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir Glyphs/instance_ufos
+# Generating Glyphs/instance_ufos/Exo2-MediumItalic.ufo.json
+build Glyphs/instance_ufos/Exo2-MediumItalic.ufo.json: instantiateUfo $
+    Glyphs/Exo2-Italic.glyphs
+  operation = instantiateUfo
+  instance_name = Exo 2 Medium Italic
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir Glyphs/instance_ufos
+# Generating Glyphs/instance_ufos/Exo2-SemiBoldItalic.ufo.json
+build Glyphs/instance_ufos/Exo2-SemiBoldItalic.ufo.json: instantiateUfo $
+    Glyphs/Exo2-Italic.glyphs
+  operation = instantiateUfo
+  instance_name = Exo 2 SemiBold Italic
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir Glyphs/instance_ufos
+# Generating Glyphs/instance_ufos/Exo2-BoldItalic.ufo.json
+build Glyphs/instance_ufos/Exo2-BoldItalic.ufo.json: instantiateUfo $
+    Glyphs/Exo2-Italic.glyphs
+  operation = instantiateUfo
+  instance_name = Exo 2 Bold Italic
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir Glyphs/instance_ufos
+# Generating Glyphs/instance_ufos/Exo2-ExtraBoldItalic.ufo.json
+build Glyphs/instance_ufos/Exo2-ExtraBoldItalic.ufo.json: instantiateUfo $
+    Glyphs/Exo2-Italic.glyphs
+  operation = instantiateUfo
+  instance_name = Exo 2 ExtraBold Italic
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir Glyphs/instance_ufos
+# Generating Glyphs/instance_ufos/Exo2-BlackItalic.ufo.json
+build Glyphs/instance_ufos/Exo2-BlackItalic.ufo.json: instantiateUfo $
+    Glyphs/Exo2-Italic.glyphs
+  operation = instantiateUfo
+  instance_name = Exo 2 Black Italic
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir Glyphs/instance_ufos
+# Generating ../fonts/webfonts/Exo2[wght].woff2
+build ../fonts/webfonts/Exo2[wght].woff2: compress $
+    ../fonts/variable/Exo2[wght].ttf
+  operation = compress
+# Postprocessing  with BuildSTAT
+build $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpa0otjonv.buildStatstamp: $
+    buildSTAT-postprocess ../fonts/variable/Exo2-Italic[wght].ttf $
+    ../fonts/variable/Exo2[wght].ttf
+  stamp =  && touch $
+      /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpa0otjonv.buildStatstamp
+  postprocess = buildStat
+  args = --src /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp3zswtr97
+# Generating ../fonts/webfonts/Exo2-Italic[wght].woff2
+build ../fonts/webfonts/Exo2-Italic[wght].woff2: compress $
+    ../fonts/variable/Exo2-Italic[wght].ttf
+  operation = compress
+# Generating ../fonts/webfonts/Exo2-Thin.woff2
+build ../fonts/webfonts/Exo2-Thin.woff2: compress ../fonts/ttf/Exo2-Thin.ttf
+  operation = compress
+# Generating ../fonts/webfonts/Exo2-ExtraLight.woff2
+build ../fonts/webfonts/Exo2-ExtraLight.woff2: compress $
+    ../fonts/ttf/Exo2-ExtraLight.ttf
+  operation = compress
+# Generating ../fonts/webfonts/Exo2-Light.woff2
+build ../fonts/webfonts/Exo2-Light.woff2: compress ../fonts/ttf/Exo2-Light.ttf
+  operation = compress
+# Generating ../fonts/webfonts/Exo2-Regular.woff2
+build ../fonts/webfonts/Exo2-Regular.woff2: compress $
+    ../fonts/ttf/Exo2-Regular.ttf
+  operation = compress
+# Generating ../fonts/webfonts/Exo2-Medium.woff2
+build ../fonts/webfonts/Exo2-Medium.woff2: compress $
+    ../fonts/ttf/Exo2-Medium.ttf
+  operation = compress
+# Generating ../fonts/webfonts/Exo2-SemiBold.woff2
+build ../fonts/webfonts/Exo2-SemiBold.woff2: compress $
+    ../fonts/ttf/Exo2-SemiBold.ttf
+  operation = compress
+# Generating ../fonts/webfonts/Exo2-Bold.woff2
+build ../fonts/webfonts/Exo2-Bold.woff2: compress ../fonts/ttf/Exo2-Bold.ttf
+  operation = compress
+# Generating ../fonts/webfonts/Exo2-ExtraBold.woff2
+build ../fonts/webfonts/Exo2-ExtraBold.woff2: compress $
+    ../fonts/ttf/Exo2-ExtraBold.ttf
+  operation = compress
+# Generating ../fonts/webfonts/Exo2-Black.woff2
+build ../fonts/webfonts/Exo2-Black.woff2: compress ../fonts/ttf/Exo2-Black.ttf
+  operation = compress
+# Generating ../fonts/webfonts/Exo2-ThinItalic.woff2
+build ../fonts/webfonts/Exo2-ThinItalic.woff2: compress $
+    ../fonts/ttf/Exo2-ThinItalic.ttf
+  operation = compress
+# Generating ../fonts/webfonts/Exo2-ExtraLightItalic.woff2
+build ../fonts/webfonts/Exo2-ExtraLightItalic.woff2: compress $
+    ../fonts/ttf/Exo2-ExtraLightItalic.ttf
+  operation = compress
+# Generating ../fonts/webfonts/Exo2-LightItalic.woff2
+build ../fonts/webfonts/Exo2-LightItalic.woff2: compress $
+    ../fonts/ttf/Exo2-LightItalic.ttf
+  operation = compress
+# Generating ../fonts/webfonts/Exo2-Italic.woff2
+build ../fonts/webfonts/Exo2-Italic.woff2: compress $
+    ../fonts/ttf/Exo2-Italic.ttf
+  operation = compress
+# Generating ../fonts/webfonts/Exo2-MediumItalic.woff2
+build ../fonts/webfonts/Exo2-MediumItalic.woff2: compress $
+    ../fonts/ttf/Exo2-MediumItalic.ttf
+  operation = compress
+# Generating ../fonts/webfonts/Exo2-SemiBoldItalic.woff2
+build ../fonts/webfonts/Exo2-SemiBoldItalic.woff2: compress $
+    ../fonts/ttf/Exo2-SemiBoldItalic.ttf
+  operation = compress
+# Generating ../fonts/webfonts/Exo2-BoldItalic.woff2
+build ../fonts/webfonts/Exo2-BoldItalic.woff2: compress $
+    ../fonts/ttf/Exo2-BoldItalic.ttf
+  operation = compress
+# Generating ../fonts/webfonts/Exo2-ExtraBoldItalic.woff2
+build ../fonts/webfonts/Exo2-ExtraBoldItalic.woff2: compress $
+    ../fonts/ttf/Exo2-ExtraBoldItalic.ttf
+  operation = compress
+# Generating ../fonts/webfonts/Exo2-BlackItalic.woff2
+build ../fonts/webfonts/Exo2-BlackItalic.woff2: compress $
+    ../fonts/ttf/Exo2-BlackItalic.ttf
+  operation = compress
+# Generating ../fonts/variable/Exo2[wght].ttf
+build ../fonts/variable/Exo2[wght].ttf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmps9ewfi5v
+  operation = fix
+  args = 
+# Generating ../fonts/variable/Exo2-Italic[wght].ttf
+build ../fonts/variable/Exo2-Italic[wght].ttf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpmyu2kpm4
+  operation = fix
+  args = 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpad19fqle
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpad19fqle: $
+    buildTTF Glyphs/instance_ufos/Exo2-Thin.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpigc19_mr
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpigc19_mr: $
+    buildOTF Glyphs/instance_ufos/Exo2-Thin.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp60gbow1t
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp60gbow1t: $
+    autohint /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpad19fqle
+  operation = autohint
+  args = --fail-ok 
+# Generating ../fonts/ttf/Exo2-Thin.ttf
+build ../fonts/ttf/Exo2-Thin.ttf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp60gbow1t
+  operation = fix
+  args = 
+# Generating ../fonts/otf/Exo2-Thin.otf
+build ../fonts/otf/Exo2-Thin.otf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpigc19_mr
+  operation = fix
+  args = 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpwdcbidks
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpwdcbidks: $
+    buildTTF Glyphs/instance_ufos/Exo2-ExtraLight.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpcc0crch6
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpcc0crch6: $
+    buildOTF Glyphs/instance_ufos/Exo2-ExtraLight.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmplgmbk6yg
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmplgmbk6yg: $
+    autohint /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpwdcbidks
+  operation = autohint
+  args = --fail-ok 
+# Generating ../fonts/ttf/Exo2-ExtraLight.ttf
+build ../fonts/ttf/Exo2-ExtraLight.ttf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmplgmbk6yg
+  operation = fix
+  args = 
+# Generating ../fonts/otf/Exo2-ExtraLight.otf
+build ../fonts/otf/Exo2-ExtraLight.otf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpcc0crch6
+  operation = fix
+  args = 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpfvki4b99
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpfvki4b99: $
+    buildTTF Glyphs/instance_ufos/Exo2-Light.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp9etxgl9a
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp9etxgl9a: $
+    buildOTF Glyphs/instance_ufos/Exo2-Light.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpamzb1jjh
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpamzb1jjh: $
+    autohint /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpfvki4b99
+  operation = autohint
+  args = --fail-ok 
+# Generating ../fonts/ttf/Exo2-Light.ttf
+build ../fonts/ttf/Exo2-Light.ttf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpamzb1jjh
+  operation = fix
+  args = 
+# Generating ../fonts/otf/Exo2-Light.otf
+build ../fonts/otf/Exo2-Light.otf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp9etxgl9a
+  operation = fix
+  args = 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpmqmftm7v
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpmqmftm7v: $
+    buildTTF Glyphs/instance_ufos/Exo2-Regular.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp4l7cp5jw
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp4l7cp5jw: $
+    buildOTF Glyphs/instance_ufos/Exo2-Regular.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpwaowgnw2
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpwaowgnw2: $
+    autohint /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpmqmftm7v
+  operation = autohint
+  args = --fail-ok 
+# Generating ../fonts/ttf/Exo2-Regular.ttf
+build ../fonts/ttf/Exo2-Regular.ttf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpwaowgnw2
+  operation = fix
+  args = 
+# Generating ../fonts/otf/Exo2-Regular.otf
+build ../fonts/otf/Exo2-Regular.otf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp4l7cp5jw
+  operation = fix
+  args = 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpofq4any3
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpofq4any3: $
+    buildTTF Glyphs/instance_ufos/Exo2-Medium.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp8_y9bhza
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp8_y9bhza: $
+    buildOTF Glyphs/instance_ufos/Exo2-Medium.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpdjcp1lpu
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpdjcp1lpu: $
+    autohint /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpofq4any3
+  operation = autohint
+  args = --fail-ok 
+# Generating ../fonts/ttf/Exo2-Medium.ttf
+build ../fonts/ttf/Exo2-Medium.ttf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpdjcp1lpu
+  operation = fix
+  args = 
+# Generating ../fonts/otf/Exo2-Medium.otf
+build ../fonts/otf/Exo2-Medium.otf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp8_y9bhza
+  operation = fix
+  args = 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp7kte4ogv
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp7kte4ogv: $
+    buildTTF Glyphs/instance_ufos/Exo2-SemiBold.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpadcp9f7n
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpadcp9f7n: $
+    buildOTF Glyphs/instance_ufos/Exo2-SemiBold.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmptxdvk8ot
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmptxdvk8ot: $
+    autohint /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp7kte4ogv
+  operation = autohint
+  args = --fail-ok 
+# Generating ../fonts/ttf/Exo2-SemiBold.ttf
+build ../fonts/ttf/Exo2-SemiBold.ttf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmptxdvk8ot
+  operation = fix
+  args = 
+# Generating ../fonts/otf/Exo2-SemiBold.otf
+build ../fonts/otf/Exo2-SemiBold.otf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpadcp9f7n
+  operation = fix
+  args = 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpd6469gxa
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpd6469gxa: $
+    buildTTF Glyphs/instance_ufos/Exo2-Bold.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpucd9sluu
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpucd9sluu: $
+    buildOTF Glyphs/instance_ufos/Exo2-Bold.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp0pbf9dbz
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp0pbf9dbz: $
+    autohint /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpd6469gxa
+  operation = autohint
+  args = --fail-ok 
+# Generating ../fonts/ttf/Exo2-Bold.ttf
+build ../fonts/ttf/Exo2-Bold.ttf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp0pbf9dbz
+  operation = fix
+  args = 
+# Generating ../fonts/otf/Exo2-Bold.otf
+build ../fonts/otf/Exo2-Bold.otf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpucd9sluu
+  operation = fix
+  args = 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpgfo2zkey
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpgfo2zkey: $
+    buildTTF Glyphs/instance_ufos/Exo2-ExtraBold.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp63entw34
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp63entw34: $
+    buildOTF Glyphs/instance_ufos/Exo2-ExtraBold.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpthry5oat
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpthry5oat: $
+    autohint /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpgfo2zkey
+  operation = autohint
+  args = --fail-ok 
+# Generating ../fonts/ttf/Exo2-ExtraBold.ttf
+build ../fonts/ttf/Exo2-ExtraBold.ttf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpthry5oat
+  operation = fix
+  args = 
+# Generating ../fonts/otf/Exo2-ExtraBold.otf
+build ../fonts/otf/Exo2-ExtraBold.otf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp63entw34
+  operation = fix
+  args = 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpq9n9girw
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpq9n9girw: $
+    buildTTF Glyphs/instance_ufos/Exo2-Black.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpr99hxkm_
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpr99hxkm_: $
+    buildOTF Glyphs/instance_ufos/Exo2-Black.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpkuh5mqz9
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpkuh5mqz9: $
+    autohint /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpq9n9girw
+  operation = autohint
+  args = --fail-ok 
+# Generating ../fonts/ttf/Exo2-Black.ttf
+build ../fonts/ttf/Exo2-Black.ttf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpkuh5mqz9
+  operation = fix
+  args = 
+# Generating ../fonts/otf/Exo2-Black.otf
+build ../fonts/otf/Exo2-Black.otf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpr99hxkm_
+  operation = fix
+  args = 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmps25s54nq
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmps25s54nq: $
+    buildTTF Glyphs/instance_ufos/Exo2-ThinItalic.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp6dd9t1vx
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp6dd9t1vx: $
+    buildOTF Glyphs/instance_ufos/Exo2-ThinItalic.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp24s_urk0
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp24s_urk0: $
+    autohint /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmps25s54nq
+  operation = autohint
+  args = --fail-ok 
+# Generating ../fonts/ttf/Exo2-ThinItalic.ttf
+build ../fonts/ttf/Exo2-ThinItalic.ttf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp24s_urk0
+  operation = fix
+  args = 
+# Generating ../fonts/otf/Exo2-ThinItalic.otf
+build ../fonts/otf/Exo2-ThinItalic.otf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp6dd9t1vx
+  operation = fix
+  args = 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp3umnkl_g
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp3umnkl_g: $
+    buildTTF Glyphs/instance_ufos/Exo2-ExtraLightItalic.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpk09ph1e4
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpk09ph1e4: $
+    buildOTF Glyphs/instance_ufos/Exo2-ExtraLightItalic.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpto7j29zy
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpto7j29zy: $
+    autohint /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp3umnkl_g
+  operation = autohint
+  args = --fail-ok 
+# Generating ../fonts/ttf/Exo2-ExtraLightItalic.ttf
+build ../fonts/ttf/Exo2-ExtraLightItalic.ttf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpto7j29zy
+  operation = fix
+  args = 
+# Generating ../fonts/otf/Exo2-ExtraLightItalic.otf
+build ../fonts/otf/Exo2-ExtraLightItalic.otf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpk09ph1e4
+  operation = fix
+  args = 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpbtspjwu8
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpbtspjwu8: $
+    buildTTF Glyphs/instance_ufos/Exo2-LightItalic.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmppu3ns8yl
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmppu3ns8yl: $
+    buildOTF Glyphs/instance_ufos/Exo2-LightItalic.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp2ideqbn5
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp2ideqbn5: $
+    autohint /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpbtspjwu8
+  operation = autohint
+  args = --fail-ok 
+# Generating ../fonts/ttf/Exo2-LightItalic.ttf
+build ../fonts/ttf/Exo2-LightItalic.ttf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp2ideqbn5
+  operation = fix
+  args = 
+# Generating ../fonts/otf/Exo2-LightItalic.otf
+build ../fonts/otf/Exo2-LightItalic.otf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmppu3ns8yl
+  operation = fix
+  args = 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp4rxl0gwj
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp4rxl0gwj: $
+    buildTTF Glyphs/instance_ufos/Exo2-Italic.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpfvqdbwsf
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpfvqdbwsf: $
+    buildOTF Glyphs/instance_ufos/Exo2-Italic.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpjsthlnbo
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpjsthlnbo: $
+    autohint /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp4rxl0gwj
+  operation = autohint
+  args = --fail-ok 
+# Generating ../fonts/ttf/Exo2-Italic.ttf
+build ../fonts/ttf/Exo2-Italic.ttf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpjsthlnbo
+  operation = fix
+  args = 
+# Generating ../fonts/otf/Exo2-Italic.otf
+build ../fonts/otf/Exo2-Italic.otf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpfvqdbwsf
+  operation = fix
+  args = 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp3wmu5cu1
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp3wmu5cu1: $
+    buildTTF Glyphs/instance_ufos/Exo2-MediumItalic.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmplb0u4rpw
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmplb0u4rpw: $
+    buildOTF Glyphs/instance_ufos/Exo2-MediumItalic.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpda1qloj8
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpda1qloj8: $
+    autohint /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp3wmu5cu1
+  operation = autohint
+  args = --fail-ok 
+# Generating ../fonts/ttf/Exo2-MediumItalic.ttf
+build ../fonts/ttf/Exo2-MediumItalic.ttf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpda1qloj8
+  operation = fix
+  args = 
+# Generating ../fonts/otf/Exo2-MediumItalic.otf
+build ../fonts/otf/Exo2-MediumItalic.otf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmplb0u4rpw
+  operation = fix
+  args = 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpr2c8x0tl
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpr2c8x0tl: $
+    buildTTF Glyphs/instance_ufos/Exo2-SemiBoldItalic.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpqo3kje05
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpqo3kje05: $
+    buildOTF Glyphs/instance_ufos/Exo2-SemiBoldItalic.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpgx47s88y
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpgx47s88y: $
+    autohint /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpr2c8x0tl
+  operation = autohint
+  args = --fail-ok 
+# Generating ../fonts/ttf/Exo2-SemiBoldItalic.ttf
+build ../fonts/ttf/Exo2-SemiBoldItalic.ttf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpgx47s88y
+  operation = fix
+  args = 
+# Generating ../fonts/otf/Exo2-SemiBoldItalic.otf
+build ../fonts/otf/Exo2-SemiBoldItalic.otf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpqo3kje05
+  operation = fix
+  args = 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmplzhqf451
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmplzhqf451: $
+    buildTTF Glyphs/instance_ufos/Exo2-BoldItalic.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpzaave61u
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpzaave61u: $
+    buildOTF Glyphs/instance_ufos/Exo2-BoldItalic.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmphhwqiu1t
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmphhwqiu1t: $
+    autohint /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmplzhqf451
+  operation = autohint
+  args = --fail-ok 
+# Generating ../fonts/ttf/Exo2-BoldItalic.ttf
+build ../fonts/ttf/Exo2-BoldItalic.ttf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmphhwqiu1t
+  operation = fix
+  args = 
+# Generating ../fonts/otf/Exo2-BoldItalic.otf
+build ../fonts/otf/Exo2-BoldItalic.otf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpzaave61u
+  operation = fix
+  args = 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp3e2jjr4z
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp3e2jjr4z: $
+    buildTTF Glyphs/instance_ufos/Exo2-ExtraBoldItalic.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp_9e6vmhd
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp_9e6vmhd: $
+    buildOTF Glyphs/instance_ufos/Exo2-ExtraBoldItalic.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpuky2d7ar
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpuky2d7ar: $
+    autohint /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp3e2jjr4z
+  operation = autohint
+  args = --fail-ok 
+# Generating ../fonts/ttf/Exo2-ExtraBoldItalic.ttf
+build ../fonts/ttf/Exo2-ExtraBoldItalic.ttf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpuky2d7ar
+  operation = fix
+  args = 
+# Generating ../fonts/otf/Exo2-ExtraBoldItalic.otf
+build ../fonts/otf/Exo2-ExtraBoldItalic.otf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp_9e6vmhd
+  operation = fix
+  args = 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpyq3nlqxf
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpyq3nlqxf: $
+    buildTTF Glyphs/instance_ufos/Exo2-BlackItalic.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp5ny3qzxm
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp5ny3qzxm: $
+    buildOTF Glyphs/instance_ufos/Exo2-BlackItalic.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpxvc9q1cr
+build /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpxvc9q1cr: $
+    autohint /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpyq3nlqxf
+  operation = autohint
+  args = --fail-ok 
+# Generating ../fonts/ttf/Exo2-BlackItalic.ttf
+build ../fonts/ttf/Exo2-BlackItalic.ttf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpxvc9q1cr
+  operation = fix
+  args = 
+# Generating ../fonts/otf/Exo2-BlackItalic.otf
+build ../fonts/otf/Exo2-BlackItalic.otf: fix $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmp5ny3qzxm
+  operation = fix
+  args = 
+default ../fonts/webfonts/Exo2[wght].woff2 $
+    /var/folders/rg/9txh3wk556g9mx7wpz0z2dlc0000gn/T/tmpa0otjonv.buildStatstamp $
+    ../fonts/webfonts/Exo2-Italic[wght].woff2 $
+    ../fonts/webfonts/Exo2-Thin.woff2 $
+    ../fonts/webfonts/Exo2-ExtraLight.woff2 $
+    ../fonts/webfonts/Exo2-Light.woff2 ../fonts/webfonts/Exo2-Regular.woff2 $
+    ../fonts/webfonts/Exo2-Medium.woff2 $
+    ../fonts/webfonts/Exo2-SemiBold.woff2 ../fonts/webfonts/Exo2-Bold.woff2 $
+    ../fonts/webfonts/Exo2-ExtraBold.woff2 $
+    ../fonts/webfonts/Exo2-Black.woff2 $
+    ../fonts/webfonts/Exo2-ThinItalic.woff2 $
+    ../fonts/webfonts/Exo2-ExtraLightItalic.woff2 $
+    ../fonts/webfonts/Exo2-LightItalic.woff2 $
+    ../fonts/webfonts/Exo2-Italic.woff2 $
+    ../fonts/webfonts/Exo2-MediumItalic.woff2 $
+    ../fonts/webfonts/Exo2-SemiBoldItalic.woff2 $
+    ../fonts/webfonts/Exo2-BoldItalic.woff2 $
+    ../fonts/webfonts/Exo2-ExtraBoldItalic.woff2 $
+    ../fonts/webfonts/Exo2-BlackItalic.woff2 ../fonts/otf/Exo2-Thin.otf $
+    ../fonts/otf/Exo2-ExtraLight.otf ../fonts/otf/Exo2-Light.otf $
+    ../fonts/otf/Exo2-Regular.otf ../fonts/otf/Exo2-Medium.otf $
+    ../fonts/otf/Exo2-SemiBold.otf ../fonts/otf/Exo2-Bold.otf $
+    ../fonts/otf/Exo2-ExtraBold.otf ../fonts/otf/Exo2-Black.otf $
+    ../fonts/otf/Exo2-ThinItalic.otf ../fonts/otf/Exo2-ExtraLightItalic.otf $
+    ../fonts/otf/Exo2-LightItalic.otf ../fonts/otf/Exo2-Italic.otf $
+    ../fonts/otf/Exo2-MediumItalic.otf ../fonts/otf/Exo2-SemiBoldItalic.otf $
+    ../fonts/otf/Exo2-BoldItalic.otf ../fonts/otf/Exo2-ExtraBoldItalic.otf $
+    ../fonts/otf/Exo2-BlackItalic.otf

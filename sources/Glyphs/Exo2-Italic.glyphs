@@ -1,5 +1,5 @@
 {
-.appVersion = "3316";
+.appVersion = "3319";
 .formatVersion = 3;
 axes = (
 {
@@ -123546,7 +123546,7 @@ key = copyrights;
 values = (
 {
 language = dflt;
-value = "Copyright 2013 The Exo 2 Project Authors (https://github.com/NDISCOVER/Exo-2.0)";
+value = "Copyright 2013 The Exo 2 Project Authors (https://github.com/googlefonts/Exo-2.0)";
 }
 );
 },
@@ -123664,6 +123664,7 @@ name = hStem0;
 );
 unitsPerEm = 1000;
 userData = {
+GSDontShowVersionAlert = 1;
 UFO.lib = {
 com.schriftgestaltung.customName = Italic;
 com.schriftgestaltung.customParameter.GSFont.DisplayStrings = "";
